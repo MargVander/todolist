@@ -1,0 +1,4 @@
+<% if @task.status == true %>
+document.getElementById('task<%= @task.id %>').style.color = "green"
+ console.log(document.getElementById('task<%= @task.id %>'));
+<%end%>
