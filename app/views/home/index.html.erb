@@ -13,7 +13,7 @@
         <% unless task.deadline.nil? %>
           , to read: <%= task.deadline.strftime('%D')  %>
         <% end %>
-        <a href="<%=edit_task_path(task.id)%>">edit</a>
+        <a class="text-danger" href="<%=task_path(task.id)%>" data-confirm= 'Are you sure ?' data-method="DELETE", data-remote="true">delete</a>
       </li>
       <% end %>
     </ul>

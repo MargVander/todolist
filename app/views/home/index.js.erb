@@ -1,0 +1,5 @@
+<% @task.each do  |category|%>
+  <% if task.status == true %>
+    document.getElementById('task<%= task.id %>').style.color = "green"
+  <% end %>
+<% end %>
