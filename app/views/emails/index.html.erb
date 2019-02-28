@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h5>Your messages</h5><br>
+      <ul>
+      <% @email.each do |email| %>
+      <% if email.read == true %>
+      <li class="email-read" id="mail<%=email.id%>"><a class="text-dark" href="<%=email_path(email.id)%>" data-remote="true"><%=email.object%></a></li><br>
+      <% else %>
+      <li id="mail<%=email.id%>"><a class="text-dark" href="<%=email_path(email.id)%>" data-remote="true"><%=email.object%></a></li><br>
+      <% end %>
+      <% end %>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <div class="card">
+        <div class="container">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
