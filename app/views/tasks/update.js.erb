@@ -1,4 +1,6 @@
 <% if @task.status == true %>
-document.getElementById('task<%= @task.id %>').style.color = "green"
- console.log(document.getElementById('task<%= @task.id %>'));
+// var checked = document.getElementById('task<%= @task.id %>')//.style.color = "green"
+//  console.log(document.getElementById('task<%= @task.id %>'));
+$('#task<%= @task.id %>').css("color", "lime");
+$('#task<%= @task.id %>').fadeOut(1000)
 <% end %>

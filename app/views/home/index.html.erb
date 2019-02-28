@@ -7,13 +7,15 @@
   <div class="card appear" id="<%= category.id %>">
     <ul>
       <% category.tasks.each do |task|  %>
+      <% if task.status == false %>
       <li id="task<%= task.id %>">
         <%= check_box_tag dom_id(task), nil, task.status, :class => 'checkbox', data: {remote: true, url: task_path(task.id), method: 'PUT' }%>
         <%= task.title  %>
         <% unless task.deadline.nil? %>
           , to read: <%= task.deadline.strftime('%D')  %>
-        <% end %>
         <a class="text-danger" href="<%=task_path(task.id)%>" data-confirm= 'Are you sure ?' data-method="DELETE", data-remote="true">delete</a>
+        <% end %>
+      <% end %>
       </li>
       <% end %>
     </ul>
