@@ -1,24 +1,33 @@
-# README
+<img style="width: 500px" src="https://i.gifer.com/3Dht.gif" alt="kill bill checklist"/>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# TO DO LIST
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+Vous pouvez retrouvez mon site au https://chose-a-faire.herokuapp.com
 
-* System dependencies
+#ATTENTION !!!!
+Lorsque vous créez un évènement merci de mettre vos dates au format `année-mois-jour`. J'ai virer le truc strftime parce que j'avais un bug avec. Ou alors ne mettez pas du tout de date c'est pas obligé de toute façon.
 
-* Configuration
+Si vous voulez voir en local :
 
-* Database creation
+Git clone le projet.
+Placez-vous à la racine,  puis dans le terminal :
 
-* Database initialization
+`bundle install`
+`rails db:migrate`  => si il y a des migrations down.
+`rails db:seed`  => vous charge une base de donnée aléatoire.
+`rails s` => pour voir le site sur http://localhost:3000
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+## Built With
+
+* [Ruby on rails](https://rubyonrails.org/) - The web framework used
+
+
+
+## Authors
+
+* **Margaux Vanderbeken**
